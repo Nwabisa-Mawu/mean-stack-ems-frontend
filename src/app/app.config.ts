@@ -9,6 +9,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideClientHydration(withEventReplay()),
     provideRouter(routes),
+    // The withFetch function is used to configure the HttpClient service to use the fetch API.
     provideHttpClient(withFetch()),
     // ...
   ],
