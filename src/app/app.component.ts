@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { EmployeesListComponent } from './components/employeelist.component';
+import { EmployeesListComponent } from './components/employee-list/employeelist.component';
 
 @Component({
   selector: 'app-root',

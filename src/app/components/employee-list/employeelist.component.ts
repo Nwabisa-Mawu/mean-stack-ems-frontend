@@ -1,6 +1,6 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { Employee } from '../services/employee.service';
-import { EmployeeService } from '../services/employee.service';
+import { Employee } from '../../services/employee.service';
+import { EmployeeService } from '../../services/employee.service';
 import { RouterModule } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';

@@ -1,0 +1,27 @@
+ <form [formGroup]="employeeForm" (ngSubmit)="submitForm()" class="employee-form" autocomplete="off">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="name.invalid && name.touched">
+          Name must be at least 3 characters long.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Position</mat-label>
+        <input matInput formControlName="position" />
+        <mat-error *ngIf="position.invalid && position.touched">
+          Position must be at least 5 characters long.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-radio-group formControlName="level">
+        <mat-radio-button value="junior">Junior</mat-radio-button>
+        <mat-radio-button value="mid">Mid</mat-radio-button>
+        <mat-radio-button value="senior">Senior</mat-radio-button>
+      </mat-radio-group>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="employeeForm.invalid">
+        {{!!initialState ? 'Update' : 'Create'}}
+      </button>
+    </form>
