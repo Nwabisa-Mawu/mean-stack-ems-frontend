@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeFormComponent } from '../employee-form/employee-form.component';
-import { Employee } from '../../services/employee.service';
-import { EmployeeService } from '../../services/employee.service';
+import { Employee } from '../../services/client/employee.service';
+import { EmployeeService } from '../../services/client/employee.service';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({

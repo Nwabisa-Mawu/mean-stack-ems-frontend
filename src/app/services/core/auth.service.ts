@@ -11,14 +11,19 @@ export class AuthService {
     constructor(private http: HttpClient, private router: Router) { }
 
     register(user: any) {
-        return this.http.post(`${this.baseUrl}/register`, user);
+        try {
+            return this.http.post(`${this.baseUrl}/register`, user);
+        } catch (error) {
+            console.error('Registration error:', error);
+            throw error; // Rethrow the error to handle it in the component
+        }
     }
 
     login(user: any) {
         return this.http.post<{ token: string }>(`${this.baseUrl}/login`, user).subscribe({
             next: (res) => {
                 localStorage.setItem('token', res.token);
-                this.router.navigate(['/']);
+                this.router.navigate(['/home']);
             },
             error: (err) => {
                 alert('Login failed');

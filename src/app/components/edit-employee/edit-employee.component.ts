@@ -1,8 +1,8 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
 import { EmployeeFormComponent } from '../employee-form/employee-form.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Employee } from '../../services/employee.service';
-import { EmployeeService } from '../../services/employee.service';
+import { Employee } from '../../services/client/employee.service';
+import { EmployeeService } from '../../services/client/employee.service';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({

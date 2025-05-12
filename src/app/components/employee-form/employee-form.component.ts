@@ -4,7 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
-import { Employee } from '../../services/employee.service';
+import { Employee } from '../../services/client/employee.service';
 
 @Component({
   selector: 'app-employee-form',

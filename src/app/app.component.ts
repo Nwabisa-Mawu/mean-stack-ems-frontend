@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { EmployeesListComponent } from './components/employee-list/employeelist.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, EmployeesListComponent, MatToolbarModule],
+  imports: [RouterOutlet, MatToolbarModule, HeaderComponent],
   styles: [
     `
       main {
@@ -16,9 +17,10 @@ import { EmployeesListComponent } from './components/employee-list/employeelist.
     `,
   ],
   template: `
-    <mat-toolbar>
-      <span>Employees Management System</span>
-    </mat-toolbar>
+    <!-- <mat-toolbar> -->
+      <!-- <span>Employees Management System</span> -->
+       <app-header></app-header>
+    <!-- </mat-toolbar> -->
     <main>
       <router-outlet />
     </main>
